@@ -26,9 +26,18 @@ window.onload = function(){
 }
 //obtem a matriz 10x10 do tabuleiro pegando a linha e os elementos filhos da linha x
 function linha_coluna(){
-    for(i = 0 ;i <17; i++){
-        linha.push(document.getElementById("linha"+i))
-        coluna.push(document.getElementById("linha"+i).children)
+    for(i = 0 ;i < 17; i++){
+		let elemento_linha = document.createElement("section")
+		elemento_linha.setAttribute("class", "linha")
+        linha.push(elemento_linha)
+		for(j = 0 ;j < 17; j++){
+			let elemento_coluna = document.createElement("div")
+			elemento_coluna.setAttribute("class", "coluna")
+			elemento_linha.appendChild(elemento_coluna)
+		}
+		coluna.push(elemento_linha.children)
+		let tabaleiro = document.querySelector(".tabaleiro")
+		tabaleiro.appendChild(elemento_linha)
         //console.log(linha)
     }
 }
