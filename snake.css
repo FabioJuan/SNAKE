@@ -13,17 +13,19 @@ div{
     border-radius: 3px;
 }
 .tabaleiro{
+    display: flexbox;
     width: auto;
     height: auto;
-    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     background-color: green;
     border-radius: 10px;
+
 }
 main{
-    display: flex;
-    
+    display: grid;
+    place-items: center;
+    height: 700px;
 }
 header{
     border: 0cap;
@@ -38,7 +40,7 @@ header{
 }
 body{
     margin: 0%;
-    background-color: blue;
+    background-color: black;
 }
 #um{
     background-color: blueviolet;
